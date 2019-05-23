@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringTaskTest1:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SpringTaskTest1-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SpringTaskTest1:war exploded" />
+    </root>
+  </artifact>
+</component>

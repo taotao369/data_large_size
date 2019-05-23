@@ -1,0 +1,36 @@
+一, Spring Task简介
+1.定时任务
+2.三种
+Java自带的API  java.util.Timer类  java.util.TimerTask类
+Quartz框架  开源  功能强大   使用起来稍显复杂   
+Spring 3.0以后自带了task调度工具, 比Quartz更加的简单方便
+
+
+二,开发环境准备
+1. 创建一个JavaWeb项目(Maven工程)
+2. 引入相关的Jar包
+3. 基本的配置(web.xml)
+
+
+三, 如何使用Spring Task
+1. 纯XML配置的方式
+a. 简单定时任务
+   实现业务功能 + 配置定时规则
+ 
+b. 复杂定时任务
+   cron表达式   	
+
+
+2. 全注解的方式
+   a.在业务方法上提供注解
+   b.开启注解支持
+
+四, spring boot实现定时任务
+
+
+
+
+
+
+
+

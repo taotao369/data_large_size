@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<bean id="taskService" class="cn.itcast.wk.service.TaskServiceImpl">
+	</bean>
+
+	<!-- 配置定时规则 -->
+	<task:scheduled-tasks>
+		<!-- 可以配置多个定时任务 -->
+		 <task:scheduled ref="taskService" method="firstTask"
+			initial-delay="1000" fixed-delay="1000" />
+		<task:scheduled ref="taskService" method="secondTask"
+			initial-delay="2000" fixed-delay="3000" />
+			
+		<!--<task:scheduled ref="taskService" method="firstTask"
+		cron="*/5 * * * * ?"/>
+		
+		<task:scheduled ref="taskService" method="secondTask"
+		cron="0 45 14 * * ?"/>-->
+			
+	</task:scheduled-tasks>
+
+</beans>
